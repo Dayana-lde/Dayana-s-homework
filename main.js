@@ -1,0 +1,4 @@
+const array = ["nastya", 'nika', 'liza', 'dayana', 'Aitolkyn', 'ardana', 'assem', 'enlik'];
+for(let i = 0; i < array.length; i++){
+  console.log(array[i]);
+}
