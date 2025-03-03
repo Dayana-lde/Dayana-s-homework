@@ -1,9 +1,14 @@
-let name = prompt('what s your name?', ' ');
+function findname(name){
 if (name === 'Zhasmin'){
-    alert('сегодня твой счастливый день! получи свой приз.');
+  
+    console.log(name,', сегодня твой счастливый день! получи свой приз.');
 } else if (name === 'Aidana'){
-    alert('сегодня и твой день! получи скидку');
+    console.log(name,', сегодня и твой день! получи скидку');
 }
 else{
-    alert('добро пожаловать, ', name);
+    console.log('добро пожаловать, ', name);
 }
+}
+findname("Zhasmin");
+findname("Aidana");
+findname("Dana");
