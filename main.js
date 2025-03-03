@@ -1,9 +1,16 @@
-function findword(str){
-  const words = str.split('');
-  words.reverse();
-  const word2 = words.join('');
-  return word2;
+function word(smth) {
+  let word1 = smth.toString().split('');
+  word1.reverse();
+  let word2 = word1.join('');
+if (smth.toString() === word2) {
+      console.log("word is palindrome");
+  } else {
+      console.log("that is not a palindrome");
+  }
 }
-console.log(findword("level"));
-console.log(findword("noon"));
-console.log(findword("deed"));
+
+word("bob");
+word("Nan");
+word("baby");
+word(44);
+word(48);
