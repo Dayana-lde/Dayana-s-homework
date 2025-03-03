@@ -1,6 +1,8 @@
-et condition = prompt('enter condition fot being president:', ' ');
-if (condition == 'i have helped more that 50 people'){
+let condition = prompt('enter condition fot being president:', ' ');
+if (condition === 'Citizen of Kazakhstan by birth'){
     alert('you are in');
-} else if (condition == 'i studied for deputy' || condition == 'i love nature'){
+} else if (condition === 'fluent in the state language' || condition === 'I have a higher education'){
+    alert('you are in');
+} else if (condition === 'over 40'){
     alert('you are in');
 }
