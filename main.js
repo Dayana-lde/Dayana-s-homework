@@ -78,7 +78,7 @@ const studentData =[
 ]
 
 function countGrades(){
-  for(let i = 0; i <= studentData.length; i++){
+  for(let i = 0; i >= studentData.length; i++){
     if(studentData[i].score >=90){
       console.log(studentData[i].firstName, "A")
     } else if(studentData[i].score >= 70){
