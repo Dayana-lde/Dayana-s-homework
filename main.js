@@ -4,17 +4,30 @@
 let arr =[1,2,3,4,5]
 arr.forEach(num => console.log(num * 3));
 
+function countArr(){
+  if(arr !== 0){
+    arr.forEach(num => console.log(num * 2));
+    } 
+}
+countArr();
+
+
 // map()
 // выполняет определенную функцию к каждому элементу массива при этом создает новый массив
 
 let arr1 =[1,2,3,4,5]
 arr1.map(num => console.log(num + 5));
 
+arr1.map(num => console.log(num - 5));
+
 // sort()
 // сортирует массив как строки но для лучшего использования надо задавать сравнение для сортировки, но при этом исходное значение массива меняется
 
 let arr2 =[2,4,7,6,8,0,9]
 arr2.sort((a,b) => b - a)
+console.log(arr2)
+
+arr2.sort(() => Math.random() - 0.5);
 console.log(arr2)
 
 // filter()
@@ -32,3 +45,6 @@ console.log(evennum)
 let arr4 = [5,5,5]
 let sum = arr.reduce((number, array) => number + array);
 console.log(sum)
+
+let summin = arr4.reduce((number, array) => number - array);
+console.log(summin);
