@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tip calculator</h1>
+        <p>How much was a bill?</p>
+        <input type="number" id="bill" name="bill">
+        <p>How was your service?</p>
+        <select name="service" id="service">
+            <option value="30">30% outstanding</option>
+            <option value="20">20% good</option>
+            <option value="15">15% it was OK</option>
+            <option value="10">10% bad</option>
+            <option value="5">5% terrible</option>
+        </select>
+        <p>How many people are sharing the bill?</p>
+        <input type="number" id="people">
+        <button id="calculate">Calculate</button>
+
+        <div>
+            <p id="tip">Tip amount: </p>
+            <span id="result"></span>
+            <span id="each">each </span>
+        </div>
+
+    </div>
+
+
+
+<script>
+    const bill = document.querySelector("#bill"); //input
+const service = document.querySelector("#service"); //select with options
+const people = document.querySelector("#people"); //input
+const result = document.querySelector("#result") //span result
+const each = document.querySelector("#each"); //span each
+const calculate = document.querySelector("#calculate") //button calculate
+const tip = document.querySelector("#tip"); //p
+
+calculate.addEventListener("click", calculateTip);
+
+function calculateTip(){
+    let index = service.selectedIndex
+    let totalTip = Number(bill.value) * Number(service.options[index].value) / 100;
+    result.style.visibility = "visible";
+    tip.style.visibility = "visible";
+
+if (people.value > 1){
+    result.innerHTML = (totalTip / Number(people.value)).toFixed(2);
+    each.style.visibility = "visible";
+} else {
+    result.innerHTML = totalTip.toFixed(2);
+    each.style.visibility = "visible";
+}
+}
+
+</script>
+</body>
+</html>
