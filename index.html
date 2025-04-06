@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 500px;
+    height: 400px;
+    border: 2px black solid;
+}
+</style>
+
+<body>
+    <div>
+        <h1>Type a word in the box</h1>
+        <label>
+            <input type="text" id="input">
+        </label>
+        <p>your word lenth is:</p>
+        <span id="result">0</span>
+    </div>
+    <script>
+        let countWord = document.getElementById("input");
+        let resultEnd = document.getElementById("result");
+
+      countWord.addEventListener("input", function(){
+        const word = countWord.value;
+        const letter = word.length;
+
+        resultEnd.textContent = letter;
+      })
+    </script>
+</body>
+</html>
